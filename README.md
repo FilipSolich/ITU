@@ -1,10 +1,12 @@
 # ITU
 
-U need install
+## Project setup
 
-sudo apt-get install python3-tk
-pip install tkcalendar
+```shell
+$ python -m venv .venv
+$ source .venv/bin/activate
+$ pip install -r requirements.txt
+```
 
-
-documentary for tkcalendar
+Documentary for tkcalendar
 https://readthedocs.org/projects/tkcalendar/downloads/pdf/latest/
