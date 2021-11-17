@@ -18,32 +18,165 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+		<link rel="stylesheet" href="style/style.css">
 		<!-- Calendar -->
 		<script src="./pg-calendar/dist/js/pignose.calendar.full.min.js"></script>
 		<link rel="stylesheet" href="./pg-calendar/dist/css/pignose.calendar.min.css" />
+
+		<script type="text/javascript" src="my_js.js"></script>
 	</head>
 
-	<body class="">
+	<body>
 		<main class="row mx-4 mt-5 mb-5 min-vh-100">
-			<div class="col-xl-2 border mb-5" id="left">
-
+			<div class="col-xl-2 border mb-5" id="calendar">
 				<!-- Calendar -->
-				<div class="calendar"></div>
-
+				<div class="calendar mt-5"></div>
 			</div>
 			<div class="col-xl-10 border mb-5" id="main">
 				<!-- Time selection -->
 				<label for="reservationTime" id="reservationTimeLabel" class="form-label">Čas</label>
 				<input type="range" class="form-range" min="0" max="20" step="1" id="reservationTime">
 				<div>
-					<div id="calendar">
+					<div class="container" id="restaurant">
+						<div id="page_one">
+							<div class="row">
+								<div class="col -4 mt-5">
+									<a href="#" id="1">
+										<div class="table" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num" > <b>1.</b> </span>
+										</div>
+									</a>
+									<a href="#" id="2">
+										<div class="table" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num"> <b>2.</b> </span>
+										</div>
+									</a>
+									<a href="#" id="3">
+										<div class="table" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num"> <b>3.</b> </span>
+										</div>
+									</a>
+									<a href="#" id="4">
+										<div class="table" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num"> <b>4.</b> </span>
+										</div>
+									</a>
+									<a href="#" id="5">
+										<div class="table" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num"> <b>5.</b> </span>
+										</div>
+									</a>
+								</div>
+								<div class="col-4">
+									<div class="door"></div>
+								</div>
+								<div class="col-4">
+									<div class="row">
+										
+										<div class="mt-5 me-2 col-4">
+											<a href="#" id="6">
+												<div class="stool" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+													<span class="num_stool">6.</span>
+												</div>
+											</a>
+											<a href="#" id="7">
+												<div class="stool mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+													<span class="num_stool">7.</span>
+												</div>
+											</a>
+											<a href="#" id="8">
+												<div class="stool mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+													<span class="num_stool">8.</span>
+												</div>
+											</a>
+											<a href="#" id="9">
+												<div class="stool mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+													<span class="num_stool">9.</span>
+												</div>
+											</a>
+											<a href="#" id="10">
+												<div class="stool mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+													<span class="num_stool">10.</span>
+												</div>
+											</a>
+											<a href="#" id="11">
+												<div class="stool mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+													<span class="num_stool">11.</span>
+												</div>
+											</a>
+											<a href="#" id="12">
+												<div class="stool mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+													<span class="num_stool">12.</span>
+												</div>
+											</a>
+										</div>
+										
+										<div class="col-8">
+											<div class="bar mt-5">
+												<span class="bar_name">Bar</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
-					</div>
-					<div id="restaurant">
 
+						<div id="page_two">
+							<div class="row mb-5">
+								<div class="col-6 mt-5 ">
+									<a href="#" id="13">
+										<div class="big_table mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num_big" > <b>13.</b> </span>
+										</div>
+									</a>
+									<a href="#" id="14">
+										<div class="big_table mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num_big"> <b>14.</b> </span>
+										</div>
+									</a>
+									<a href="#" id="15">
+										<div class="big_table mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num_big"> <b>15.</b> </span>
+										</div>
+									</a>
+									<a href="#" id="16">
+										<div class="big_table mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num_big"> <b>16.</b> </span>
+										</div>
+									</a>
+								</div>
+								<div class="col-6 mt-5 mb-5">
+									<a href="#" id="17">
+										<div class="rounded_table mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num_rounded" > <b>17.</b> </span>
+										</div>
+									</a>
+									<a href="#" id="18">
+										<div class="rounded_table mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num_rounded" > <b>18.</b> </span>
+										</div>
+									</a>
+									<a href="#" id="19">
+										<div class="rounded_table mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num_rounded" > <b>19.</b> </span>
+										</div>
+									</a>
+									<a href="#" id="20">
+										<div class="rounded_table mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+											<span class="num_rounded" > <b>20.</b> </span>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex justify-content-center w-75">
+							<button type="button" class="btn btn-light mx-3" onClick="showpage1()" id="button_1">1</button>
+							<button type="button" class="btn btn-light" onClick="showpage2()" id="button_2">2</button>
+						</div>
 					</div>
 					<div id="reservations">
-						
+
 					</div>
 				</div>
 			</div>
