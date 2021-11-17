@@ -1,0 +1,48 @@
+.table{
+	height: 10em;
+	width: 10em;
+	background-color: rgb(255,228,196);
+	text-align: center;
+	border: solid black 0.15em;
+	border-radius: 1.5em;
+}
+.num{
+	vertical-align: middle;
+	line-height: 3em;
+	font-size: 3em;
+}
+.bar{
+	border: solid black 0.15em;
+	border-radius: 1.5em;
+	height: 100% !important;	
+	width: 10em !important;
+	background-color: rgb(205,133,63);
+	text-align: center;
+}
+.bar_name{
+	vertical-align: middle;
+	line-height: 12em;
+	font-size: 3em;
+}
+.stool{
+	border: solid black 0.15em;
+	border-radius: 4.5em;
+	width: 4.5em;
+	height: 4.5em;
+	text-align: center;
+	background-color: rgb(255,228,196);
+}
+.num_stool{
+	vertical-align: middle;
+	line-height: 1.4em;
+	font-size: 2.5em;
+
+}
+a:hover{
+	text-decoration-style: none;
+	text-decoration-line: none;
+	color:rgb(0,0,0);
+}
+a{
+	color:rgb(0,0,0);
+}
