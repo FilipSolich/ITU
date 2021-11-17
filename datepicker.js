@@ -1,4 +1,5 @@
 const app = new Vue({
+	import restaurant 'from restaurant.js'
 	el: '#datepicker',
 	data() {
 		return {
@@ -6,6 +7,7 @@ const app = new Vue({
 		}
 	},
 	components: {
-		vuejsDatepicker
+		vuejsDatepicker, restaurant
 	}
 })
+
