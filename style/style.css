@@ -91,3 +91,10 @@ a{
 	border: 2px;
 	font-size: 3em;
 }
+#reservationTime{
+	width: 45%	 !important;
+}
+#reservationTimeLabel{
+	width: 10%	 !important;
+
+}
