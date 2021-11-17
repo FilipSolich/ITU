@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cz">
+<html lang="cs">
 
 	<head>
 		<meta charset="UTF-8">
@@ -32,6 +32,9 @@
 
 			</div>
 			<div class="col-xl-10 border mb-5" id="main">
+				<!-- Time selection -->
+				<label for="reservationTime" id="reservationTimeLabel" class="form-label">Čas</label>
+				<input type="range" class="form-range" min="0" max="20" step="1" id="reservationTime">
 				<div>
 					<div id="calendar">
 
@@ -50,6 +53,8 @@
 			@calendar_of_reservation
 		</footer>
 
+		<stript src="data.js"></stript>
+		<script src="reservations.js"></script>
 		<script src="calendar.js"></script>
 	</body>
 </html>
