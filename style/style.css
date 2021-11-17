@@ -1,21 +1,47 @@
 .table{
-	height: 10em;
-	width: 10em;
+	height: 15%;
+	width: 30%;
 	background-color: rgb(255,228,196);
 	text-align: center;
 	border: solid black 0.15em;
 	border-radius: 1.5em;
+}
+.big_table{
+	height: 15%;
+	width: 60%;
+	background-color: rgb(255,228,196);
+	text-align: center;
+	border: solid black 0.15em;
+	border-radius: 1.5em;
+}
+.rounded_table{
+	height: 20%;
+	width: 20%;
+	background-color: rgb(255,228,196);
+	text-align: center;
+	border: solid black 0.15em;
+	border-radius: 5em;
 }
 .num{
 	vertical-align: middle;
 	line-height: 3em;
 	font-size: 3em;
 }
+.num_big{
+	vertical-align: middle;
+	line-height: 1.8em;
+	font-size: 3em;
+}
+.num_rounded{
+	vertical-align: middle;
+	line-height: 1.6em;
+	font-size: 3em;
+}
 .bar{
 	border: solid black 0.15em;
 	border-radius: 1.5em;
 	height: 100% !important;	
-	width: 10em !important;
+	width: 40% !important;
 	background-color: rgb(205,133,63);
 	text-align: center;
 }
@@ -45,4 +71,23 @@ a:hover{
 }
 a{
 	color:rgb(0,0,0);
+}
+.pignose-calendar{
+	width: 100% !important;
+}
+.door{
+	width: 6em;
+	height: 1em;
+	background-color: rgb(255,228,196);
+	border: solid black 0.01em;
+	border-radius: 0.2em;
+}
+#page_two{
+	display: none;
+}
+#button_1, #button_2{
+	width: 2em !important; 
+	height: 2em !important;
+	border: 2px;
+	font-size: 3em;
 }
