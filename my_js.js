@@ -30,5 +30,4 @@ function my_alert(x){
 }
 function noalert(x){
 	x.style.color = "black";
-
 }

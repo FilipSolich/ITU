@@ -1,5 +1,5 @@
 .table{
-	height: 15%;
+	height: 12%;
 	width: 30%;
 	background-color: rgb(255,228,196);
 	text-align: center;
@@ -24,8 +24,8 @@
 }
 .num{
 	vertical-align: middle;
-	line-height: 3em;
-	font-size: 3em;
+	line-height: 2em;
+	font-size: 2.8em;
 }
 .num_big{
 	vertical-align: middle;
@@ -54,7 +54,7 @@
 	border: solid black 0.15em;
 	border-radius: 4.5em;
 	width: 4.5em;
-	height: 4.5em;
+	height: 4em;
 	text-align: center;
 	background-color: rgb(255,228,196);
 }
@@ -96,6 +96,9 @@ a{
 }
 #reservationTimeLabel{
 	width: 10%	 !important;
+	border: 1px solid;
+	border-radius: 10px;
+	margin-top: 5px;
 
 }
 #calendar{
@@ -119,4 +122,41 @@ a{
 	width: 100%;
 	height: 100%;
 	border-radius: inherit;
+}
+#main{
+	display: inline-block;
+	height: 90% !important;
+	background-color: rgb(252, 252, 252) !important;
+	border-radius: 10px;
+	border: 2px solid;
+	border-color: rgb(0,0,0);
+}
+html body{
+	background-color: rgb(220,220,220) !important;
+}
+.timer{
+	border-bottom: 1px solid black;
+	margin-bottom: 5px;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding-left: 30px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-color: white !important;
+}
+.reservation-time, .reservation-val{
+	display: inline-block;
+	height: 8%;
+	border-bottom: 1px solid;
+	border-color:rgb(220,220,220);
+	background-color: rgb(255,255,255) !important;
+}
+.reservation-time{
+	text-align: center;
+}
+.time_reservation, .reservation{
+	background-color: rgb(255,255,255) !important;
+}
+.selected{
+	background-color: rgb(255,190,200) !important;
 }
