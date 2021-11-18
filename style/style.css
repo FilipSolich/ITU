@@ -157,3 +157,6 @@ html body{
 .time_reservation, .reservation{
 	background-color: rgb(255,255,255) !important;
 }
+.selected{
+	background-color: rgb(255,190,200) !important;
+}
