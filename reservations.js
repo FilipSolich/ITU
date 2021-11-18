@@ -23,8 +23,8 @@ function setTableColor(table_id, color) {
 
 function clearTables() {
 	let tables = $('.desk');
-	tables.forEach(element => {
-		setTableColor(element, rgb(255,228,196));
+	tables.each(function () {
+		setTableColor($(this).attr('id'), '#FFE4C4');
 	});
 }
 

@@ -3,7 +3,7 @@ function getDate() {
 }
 
 function getTime() {
-	let time = $('#reservationTimeLabel').text().replace('Čas ', '');
+	return time = $('#reservationTimeLabel').text().replace('Čas ', '');
 }
 
 function timeChange() {
@@ -11,9 +11,12 @@ function timeChange() {
 	let time = getTime();
 	clearTables();
 
-	data[date].forEach(element => {
-		if (element.timeFrom <= time && element.timeTo > time) {
-			setTableReserverd(element.table);
+	let t = data[date];
+
+
+	data[date].forEach(function (item) {
+		if (item.timeFrom <= time && item.timeTo > time) {
+			setTableReserverd(item.table);
 		}
 	});
 }
