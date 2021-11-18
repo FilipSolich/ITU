@@ -13,12 +13,16 @@ function reservationFull(date, table, timeFrom, timeTo) {
 	return false;
 }
 
-function setTableColor(table, color) {
-	table.css('background-color', color);
+function setTableReserverd(table_id) {
+	setTableColor(table_id, '#FFFFFF') // TODO: Marek doplnit barvu rezervovaneho stolu
+}
+
+function setTableColor(table_id, color) {
+	$('#' + table_id).css('background-color', color);
 }
 
 function clearTables() {
-	let tables = $('.table');
+	let tables = $('.desk');
 	tables.forEach(element => {
 		setTableColor(element, rgb(255,228,196));
 	});
