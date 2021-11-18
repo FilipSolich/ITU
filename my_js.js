@@ -10,13 +10,13 @@ function showpage2(){
 }
 
 function my_alert(x){
-	if(x.classList == "table" ){
+	if(x.classList == "table mx-5" ){
 		x.title = "stůl pro 4 osoby";
 	}
-	else if (x.classList == "big_table mt-4"){
+	else if (x.classList == "big_table mt-4 mx-5"){
 		x.title = "stůl pro 6 osob";
 	}
-	else if (x.classList == "rounded_table mt-4"){
+	else if (x.classList == "rounded_table mt-4 mx-5"){
 		x.title = "stůl pro 5 osob";
 	}
 	else if (x.classList == "stool mt-4"){
