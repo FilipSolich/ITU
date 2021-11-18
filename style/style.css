@@ -107,3 +107,16 @@ a{
 	margin-left:5%;
 	padding-left:2%;
 }
+.time_reservation span{
+	width: 100% !important;
+}
+.reservation span{
+	display: inline-block;
+	width: 100% !important;
+}
+.desk{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
