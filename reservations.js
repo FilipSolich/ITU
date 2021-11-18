@@ -46,3 +46,13 @@ function createReservation(date, table, timeFrom, timeTo, name, tel, number, not
 
 	return true;
 }
+
+function processReservationForm() {
+
+}
+
+$(function() {
+	$('#reservationTime').on('input change', function() {
+		processReservationForm();
+	});
+});
