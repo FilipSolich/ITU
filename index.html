@@ -8,20 +8,20 @@
 		<meta name="author" content="Marek Sechra">
 		<meta name="author" content="Vasil Poposki">
 
-		<!--Its working only with internet-->
+		<!-- Its working only with internet -->
+		<!-- Bootstrap + jQuery -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-		<link rel="stylesheet" href="style/style.css">
 		<!-- Calendar -->
 		<script src="./pg-calendar/dist/js/pignose.calendar.full.min.js"></script>
 		<link rel="stylesheet" href="./pg-calendar/dist/css/pignose.calendar.min.css" />
 
-		<script type="text/javascript" src="my_js.js"></script>
-
+		<!-- CSS -->
+		<link rel="stylesheet" href="style/style.css">
 	</head>
 
 	<body>
@@ -37,6 +37,7 @@
 					<input type="range" class="form-range" min="0" max="20" step="1" id="reservationTime">
 				</div>
 				<div class="row">
+					<!-- Restaurant layout -->
 					<div class="col-xl-8" id="restaurant">
 						<div id="page_one">
 							<div class="row">
@@ -215,34 +216,60 @@
 							<button type="button" class="btn btn-light" onClick="showpage2()" id="button_2">2</button>
 						</div>
 					</div>
-					<div class="col-xl-4 border"id="reservations">
-						<div class="row">
-							<div class="time_reservation col-sm-3 border">
-								<span id="time-13">13:00</span>
-								<span id="time-14">14:00</span>
-								<span id="time-15">15:00</span>
-								<span id="time-16">16:00</span>
-								<span id="time-17">17:00</span>
-								<span id="time-18">18:00</span>
-								<span id="time-19">19:00</span>
-								<span id="time-20">20:00</span>
-								<span id="time-21">21:00</span>
-								<span id="time-23">22:00</span>
-								<span id="time-24">23:00</span>
+
+					<!-- Reservations -->
+					<div class="col-xl-4"id="reservations">
+						<div class="row h-50">
+							<div class="time_reservation col-sm-3 border-left">
+								<span class="reservation-time"><b>čas</b></span>
+								<span id="time-13" class="reservation-time">13:00</span>
+								<span id="time-14" class="reservation-time">14:00</span>
+								<span id="time-15" class="reservation-time">15:00</span>
+								<span id="time-16" class="reservation-time">16:00</span>
+								<span id="time-17" class="reservation-time">17:00</span>
+								<span id="time-18" class="reservation-time">18:00</span>
+								<span id="time-19" class="reservation-time">19:00</span>
+								<span id="time-20" class="reservation-time">20:00</span>
+								<span id="time-21" class="reservation-time">21:00</span>
+								<span id="time-23" class="reservation-time">22:00</span>
+								<span id="time-24" class="reservation-time">23:00</span>
 							</div>
-							<div class="reservation col-sm-9 border">
-								<span id="reservation-13">Pani lichá</span>
-								<span id="reservation-14">14:00</span>
-								<span id="reservation-15">15:00</span>
-								<span id="reservation-16">16:00</span>
-								<span id="reservation-17">17:00</span>
-								<span id="reservation-18">18:00</span>
-								<span id="reservation-19">19:00</span>
-								<span id="reservation-20">20:00</span>
-								<span id="reservation-21">21:00</span>
-								<span id="reservation-23">22:00</span>
-								<span id="reservation-24">23:00</span>
+							<div class="reservation col-sm-9">
+								<span class="reservation-val"><b>Rezervace</b></span>
+								<span id="reservation-13" class="reservation-val">Pani lichá</span>
+								<span id="reservation-14" class="reservation-val">14:00</span>
+								<span id="reservation-15" class="reservation-val">15:00</span>
+								<span id="reservation-16" class="reservation-val">16:00</span>
+								<span id="reservation-17" class="reservation-val">17:00</span>
+								<span id="reservation-18" class="reservation-val">18:00</span>
+								<span id="reservation-19" class="reservation-val">19:00</span>
+								<span id="reservation-20" class="reservation-val">20:00</span>
+								<span id="reservation-21" class="reservation-val">21:00</span>
+								<span id="reservation-23" class="reservation-val">22:00</span>
+								<span id="reservation-24" class="reservation-val">23:00</span>
 							</div>
+						</div>
+						<div class="row h-50  border-left ">
+							<!-- Reseravtion form -->
+							<form>
+								<div class="form-group">
+									<label for="res-name"></label>
+									<input type="text" class="form-control" name="name" id="res-name" required />
+								</div>
+								<div class="form-group">
+									<label for="res-tel"></label>
+									<input type="tel" class="form-control" name="tel" id="res-tel" />
+								</div>
+								<div class="form-group">
+									<label for="res-count"></label>
+									<input type="number" class="form-control" name="count" id="res-count" />
+								</div>
+								<div class="form-group">
+									<label for="res-note"></label>
+									<input type="text" class="form-control" name="note" id="res-note" />
+								</div>
+								<input type="submit" value="Rezervovat">
+							</form>
 						</div>
 					</div>
 				</div>
@@ -253,6 +280,7 @@
 			@calendar_of_reservation
 		</footer>
 		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript" src="my_js.js"></script>
 		<script type="text/javascript" src="reservations.js"></script>
 		<script type="text/javascript" src="calendar.js"></script>
 	</body>

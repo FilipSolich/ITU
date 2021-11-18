@@ -37,4 +37,5 @@ $(function() {
 		$('#reservationTimeLabel').text('Čas ' + hours + ':' + minutes);
 		timeChange();
 	});
+
 });

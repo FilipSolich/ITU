@@ -144,6 +144,16 @@ html body{
 	border-top-right-radius: 10px;
 	background-color: white !important;
 }
+.reservation-time, .reservation-val{
+	display: inline-block;
+	height: 8%;
+	border-bottom: 1px solid;
+	border-color:rgb(220,220,220);
+	background-color: rgb(255,255,255) !important;
+}
+.reservation-time{
+	text-align: center;
+}
 .time_reservation, .reservation{
-
+	background-color: rgb(255,255,255) !important;
 }
