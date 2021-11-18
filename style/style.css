@@ -15,8 +15,8 @@
 	border-radius: 1.5em;
 }
 .rounded_table{
-	height: 20%;
-	width: 20%;
+	height: 25%;
+	width: 25%;
 	background-color: rgb(255,228,196);
 	text-align: center;
 	border: solid black 0.15em;
@@ -90,4 +90,20 @@ a{
 	height: 2em !important;
 	border: 2px;
 	font-size: 3em;
+}
+#reservationTime{
+	width: 45%	 !important;
+}
+#reservationTimeLabel{
+	width: 10%	 !important;
+
+}
+#calendar{
+	padding: 0 !important;
+	margin:0 !important;
+}
+.tables{
+	margin-right:5%; 
+	margin-left:5%;
+	padding-left:2%;
 }
