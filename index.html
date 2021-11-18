@@ -249,25 +249,25 @@
 						</div>
 						<div class="row">
 							<!-- Reseravtion form -->
-							<form>
+							<form method="post">
 								<div class="form-group">
-									<label for="res-name"></label>
+									<label for="res-name">Jméno:</label>
 									<input type="text" class="form-control" name="name" id="res-name" required />
 								</div>
 								<div class="form-group">
-									<label for="res-tel"></label>
+									<label for="res-tel">Telefon:</label>
 									<input type="tel" class="form-control" name="tel" id="res-tel" />
 								</div>
 								<div class="form-group">
-									<label for="res-count"></label>
+									<label for="res-count">Počet hostů:</label>
 									<input type="number" class="form-control" name="count" id="res-count" />
 								</div>
 								<div class="form-group">
-									<label for="res-note"></label>
+									<label for="res-note">Poznámka:</label>
 									<input type="text" class="form-control" name="note" id="res-note" />
 								</div>
-								<input type="submit" value="Rezervovat">
 							</form>
+							<button type="submit" class="btn btn-primary" id="reservationFormSubmit">Rezervovat</button>
 						</div>
 					</div>
 				</div>

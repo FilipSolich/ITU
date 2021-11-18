@@ -11,14 +11,18 @@ function timeChange() {
 	let time = getTime();
 	clearTables();
 
-	let t = data[date];
-
-
 	data[date].forEach(function (item) {
 		if (item.timeFrom <= time && item.timeTo > time) {
 			setTableReserverd(item.table);
 		}
 	});
+}
+
+function updateTimeLabel() {
+	let hours = Math.floor($('#reservationTime').val() / 2) + 13;
+	let minutes = ($('#reservationTime').val() % 2 == 0) ? "00" : "30";
+	$('#reservationTimeLabel').text('Čas ' + hours + ':' + minutes);
+	timeChange();
 }
 
 $(function() {
@@ -31,10 +35,7 @@ $(function() {
 });
 
 $(function() {
-	$('#reservationTime').on('input change', function() {
-		let hours = Math.floor($(this).val() / 2) + 13;
-		let minutes = ($(this).val() % 2 == 0) ? "00" : "30";
-		$('#reservationTimeLabel').text('Čas ' + hours + ':' + minutes);
-		timeChange();
-	});
+	$('#reservationTime').on('input change load', updateTimeLabel);
 });
+
+$(document).ready(updateTimeLabel);

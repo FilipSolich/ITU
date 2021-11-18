@@ -28,11 +28,12 @@ function clearTables() {
 	});
 }
 
-function createReservation(date, table, timeFrom, timeTo, name, tel, number, note) {
+function createReservation(date, table, timeFrom, timeTo, name, tel, count, note) {
 	createDay(date);
 
-	if (reservationFull(date, table, timeFrom, timeTo))
-		return false;
+	// TODO uncoment
+	// if (reservationFull(date, table, timeFrom, timeTo))
+	// 	return false;
 
 	data[date].push({
 		'table': table,
@@ -40,7 +41,7 @@ function createReservation(date, table, timeFrom, timeTo, name, tel, number, not
 		'timeTo': timeTo,
 		'name': name,
 		'tel': tel,
-		'number': number,
+		'count': count,
 		'note': note,
 	});
 
@@ -48,11 +49,28 @@ function createReservation(date, table, timeFrom, timeTo, name, tel, number, not
 }
 
 function processReservationForm() {
+	createReservation(
+		getDate(),
+		$('.desk-selected').attr('id'),
+		null, // TODO fill
+		null, // TODO fill
+		$('#res-name').val(),
+		$('#res-tel').val(),
+		$('#res-count').val(),
+		$('#res-note').val(),
+	);
+}
 
+function exportReservations() {
+	var blob = new Blob([JSON.stringify(data)], {
+		type: 'application/json'
+	});
+	var link = document.createElement('a');
+	link.href = window.URL.createObjectURL(blob);
+	link.download = 'export.json';
+	link.click();
 }
 
 $(function() {
-	$('#reservationTime').on('input change', function() {
-		processReservationForm();
-	});
+	$('#reservationFormSubmit').on('click', processReservationForm);
 });
