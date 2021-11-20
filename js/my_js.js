@@ -31,3 +31,17 @@ function my_alert(x){
 function noalert(x){
 	x.style.color = "black";
 }
+
+function select_table(x){
+	
+	if( x.classList[1] == "selected"){
+		x.classList.remove('selected');
+	}
+	else{
+		var y = document.getElementsByClassName("selected");
+		for( var i = 0; i < y.length ; ++i){
+			y[i].classList.remove('selected');
+		}
+		x.classList.add('selected');
+	}
+}

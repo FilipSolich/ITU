@@ -14,7 +14,7 @@ function reservationFull(date, table, timeFrom, timeTo) {
 }
 
 function setTableReserverd(table_id) {
-	setTableColor(table_id, '#FFFFFF') // TODO: Marek doplnit barvu rezervovaneho stolu
+	setTableColor(table_id, '#F1E10E') 
 }
 
 function setTableColor(table_id, color) {

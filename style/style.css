@@ -160,3 +160,21 @@ html body{
 .selected{
 	background-color: rgb(255,190,200) !important;
 }
+
+.name_reservation{
+	width: 75% !important;
+}
+.icons_reservation{
+	float: right !important;
+	width: 20% !important;
+}
+select option{
+	height: 32px;
+	border-bottom: 1px solid;
+	border-color:rgb(220,220,220);
+}
+select{
+	display: inline-block;
+	border:0;
+	
+}
