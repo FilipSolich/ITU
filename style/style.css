@@ -1,32 +1,32 @@
 .table{
 	height: 12%;
 	width: 30%;
-	background-color: rgb(255,228,196);
+	/*background-color: rgb(255,228,196);*/
 	text-align: center;
-	border: solid black 0.15em;
+	border: solid black 0.10em;
 	border-radius: 1.5em;
 }
 .big_table{
 	height: 15%;
 	width: 60%;
-	background-color: rgb(255,228,196);
+	/*background-color: rgb(255,228,196);*/
 	text-align: center;
-	border: solid black 0.15em;
+	border: solid black 0.10em;
 	border-radius: 1.5em;
 }
 .rounded_table{
 	height: 25%;
 	width: 25%;
-	background-color: rgb(255,228,196);
+	/*background-color: rgb(255,228,196);*/
 	text-align: center;
-	border: solid black 0.15em;
+	border: solid black 0.10em;
 	border-radius: 5em;
 }
 .num{
 	vertical-align: middle;
 	line-height: 2em;
 	font-size: 2.8em;
-}
+}	
 .num_big{
 	vertical-align: middle;
 	line-height: 1.8em;
@@ -38,25 +38,25 @@
 	font-size: 3em;
 }
 .bar{
-	border: solid black 0.15em;
+	border: solid black 0.10em;
 	border-radius: 1.5em;
 	height: 100% !important;	
 	width: 40% !important;
-	background-color: rgb(205,133,63);
+	background-color: rgb(220,220,220);
 	text-align: center;
 }
 .bar_name{
 	vertical-align: middle;
-	line-height: 12em;
-	font-size: 3em;
+	line-height: 18em;
+	font-size: 2em;
 }
 .stool{
-	border: solid black 0.15em;
+	border: solid black 0.10em;
 	border-radius: 4.5em;
 	width: 4.5em;
 	height: 4em;
 	text-align: center;
-	background-color: rgb(255,228,196);
+	/*background-color: rgb(255,228,196);*/
 }
 .num_stool{
 	vertical-align: middle;
@@ -78,7 +78,7 @@ a{
 .door{
 	width: 6em;
 	height: 1em;
-	background-color: rgb(255,228,196);
+	background-color: rgb(220,220,220);
 	border: solid black 0.01em;
 	border-radius: 0.2em;
 }

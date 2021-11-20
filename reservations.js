@@ -24,7 +24,7 @@ function setTableColor(table_id, color) {
 function clearTables() {
 	let tables = $('.desk');
 	tables.each(function () {
-		setTableColor($(this).attr('id'), '#FFE4C4');
+		setTableColor($(this).attr('id'), '#DCDCDC');
 	});
 }
 
