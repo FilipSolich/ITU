@@ -31,9 +31,8 @@ function clearTables() {
 function createReservation(date, table, timeFrom, timeTo, name, tel, count, note) {
 	createDay(date);
 
-	// TODO uncoment
-	// if (reservationFull(date, table, timeFrom, timeTo))
-	// 	return false;
+	if (reservationFull(date, table, timeFrom, timeTo))
+		return false;
 
 	data[date].push({
 		'table': table,
@@ -69,6 +68,10 @@ function exportReservations() {
 	link.href = window.URL.createObjectURL(blob);
 	link.download = 'export.json';
 	link.click();
+}
+
+function importReservations() {
+	// TODO
 }
 
 $(function() {
