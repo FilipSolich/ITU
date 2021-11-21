@@ -45,3 +45,18 @@ function select_table(x){
 		x.classList.add('selected');
 	}
 }
+
+document.querySelector('select[name="time_reserv"]').onchange=function(event){
+	var y = document.querySelector('select[name="time_reserv"]');
+	var x = y.selectedOptions;
+
+	var z = document.getElementsByClassName("selected_time"); //delete all class selected_time
+	var len = z.length;
+	for( var i = 0; i < len ; i++){
+		z[i].classList.remove('selected_time');
+	}
+
+	for(var i=0; i<x.length;++i){ //set news 
+		x[i].classList.add("selected_time");
+	}
+}
