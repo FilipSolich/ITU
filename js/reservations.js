@@ -48,7 +48,6 @@ function createReservation(date, table, timeFrom, timeTo, name, tel, count, note
 }
 
 function processReservationForm() {
-	// Take time from elements id `reservation-xx` class `time-selected`
 	var time_arr = $('#time_reserv').val();
 
 	createReservation(
@@ -87,7 +86,13 @@ function exportReservations() {
 }
 
 function importReservations() {
-	// TODO
+	var test = document.getElementById('uploadFile');
+	var file = test.files[0];
+	var fileread = new FileReader();
+	fileread.onload = function(e) {
+		data = JSON.parse(e.target.result);
+	};
+	fileread.readAsText(file);
 }
 
 
