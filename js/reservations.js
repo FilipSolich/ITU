@@ -50,6 +50,7 @@ function createReservation(date, table, timeFrom, timeTo, name, tel, count, note
 function processReservationForm() {
 	var time_arr = $('#time_reserv').val();
 
+	// TODO add validation
 	createReservation(
 		getDate(),
 		$('.selected').attr('id'),
@@ -69,7 +70,11 @@ function processReservationForm() {
 	timeChange();
 
 	var wrapper = document.createElement('div');
-	wrapper.innerHTML = '<div class="alert alert-success alert-dismissible" role="alert">Reservace vytvořena<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+	wrapper.innerHTML = `
+	<div class="alert alert-success alert-dismissible" role="alert">
+		Rezervace vytvořena
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>`;
 
 	var alert = $('#alertPlaceHolder');
 	alert.append(wrapper);
