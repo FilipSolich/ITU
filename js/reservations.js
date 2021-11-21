@@ -48,16 +48,32 @@ function createReservation(date, table, timeFrom, timeTo, name, tel, count, note
 }
 
 function processReservationForm() {
+	// Take time from elements id `reservation-xx` class `time-selected`
+	var time_arr = $('#time_reserv').val();
+
 	createReservation(
 		getDate(),
-		$('.desk-selected').attr('id'),
-		null, // TODO fill
-		null, // TODO fill
+		$('.selected').attr('id'),
+		time_arr[0],
+		time_arr[time_arr.length - 1],
 		$('#res-name').val(),
 		$('#res-tel').val(),
 		$('#res-count').val(),
 		$('#res-note').val(),
 	);
+
+	$('#res-name').val('');
+	$('#res-tel').val('');
+	$('#res-count').val('');
+	$('#res-note').val('');
+
+	timeChange();
+
+	var wrapper = document.createElement('div');
+	wrapper.innerHTML = '<div class="alert alert-success alert-dismissible" role="alert">Reservace vytvořena<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+
+	var alert = $('#alertPlaceHolder');
+	alert.append(wrapper);
 }
 
 function exportReservations() {
@@ -74,6 +90,18 @@ function importReservations() {
 	// TODO
 }
 
+
+// Bind form submit button
 $(function() {
 	$('#reservationFormSubmit').on('click', processReservationForm);
+});
+
+// Bind export reservations button
+$(function() {
+	$('#export').on('click', exportReservations);
+});
+
+// Bind import reservations button
+$(function() {
+	$('#import').on('click', importReservations);
 });
