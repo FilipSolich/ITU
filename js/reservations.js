@@ -48,10 +48,9 @@ function createReservation(date, table, timeFrom, timeTo, name, tel, count, note
 }
 
 function processReservationForm() {
-	// Take time from elements id `reservation-xx` class `time-selected`
 	createReservation(
 		getDate(),
-		$('.selected').attr('id'),
+		$('.desk-selected').attr('id'),
 		null, // TODO fill
 		null, // TODO fill
 		$('#res-name').val(),
@@ -75,28 +74,6 @@ function importReservations() {
 	// TODO
 }
 
-function toggleSelected() {
-	// TODO Marek
-	$(this)
-}
-
-
-// Bind form submit button
 $(function() {
 	$('#reservationFormSubmit').on('click', processReservationForm);
-});
-
-// Bind export reservations button
-$(function() {
-	$('#export').on('click', exportReservations);
-});
-
-// Bind import reservations button
-$(function() {
-	$('#import').on('click', importReservations);
-});
-
-// Bind table click
-$(function() {
-	$('.desk').on('click', toggleSelected);
 });

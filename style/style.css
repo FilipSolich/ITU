@@ -157,8 +157,9 @@ html body{
 .time_reservation, .reservation{
 	background-color: rgb(255,255,255) !important;
 }
-.selected{
-	background-color: rgb(255,190,200) !important;
+ .selected{
+	border: 4px solid;
+	border-color: rgb(176,224,230) !important;
 }
 
 .name_reservation{
