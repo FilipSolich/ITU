@@ -119,6 +119,13 @@ a{
 	display: inline-block;
 	width: 100% !important;
 }
+.myresspan{
+	display: inline !important;
+	width: 75%;
+}
+i{
+	float: right !important;
+}
 .desk{
 	display: block;
 	width: 100%;
@@ -146,7 +153,7 @@ html body{
 }
 .reservation-time, .reservation-val{
 	display: inline-block;
-	height: 8%;
+	height: 7.1%;
 	border-bottom: 1px solid;
 	border-color:rgb(220,220,220);
 	background-color: rgb(255,255,255) !important;
