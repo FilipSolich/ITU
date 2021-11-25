@@ -123,9 +123,18 @@ a{
 	display: inline !important;
 	width: 75%;
 }
+#button_delete{
+	height: 22px;
+	margin-bottom: 11px;
+	vertical-align: middle;
+	line-height: 5px;
+	font-size: 25px;
+}
 i{
 	float: right !important;
+	
 }
+
 .desk{
 	display: block;
 	width: 100%;
@@ -139,6 +148,7 @@ i{
 	border-radius: 10px;
 	border: 2px solid;
 	border-color: rgb(0,0,0);
+	padding-bottom: 100px;
 }
 html body{
 	background-color: rgb(220,220,220) !important;
@@ -165,8 +175,8 @@ html body{
 	background-color: rgb(255,255,255) !important;
 }
  .selected{
-	border: 4px solid;
-	border-color: rgb(176,224,230) !important;
+	border: 5px solid;
+	border-color: rgba(238, 241, 5, 0.986) !important;
 }
 
 .name_reservation{
@@ -185,4 +195,25 @@ select{
 	display: inline-block;
 	border:0;
 	
+}
+.keyboard{
+	background-color: white;
+	padding: 15px;
+	border-radius: 5px;
+	border: 1px solid;
+	display: none;
+}
+.input-icons i {
+	position: absolute;
+	z-index: 1;
+	margin-left: 19%;
+	margin-top: 1%;
+	width: 5px;
+}
+.fake_button{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 0;
+	height: 0;
 }

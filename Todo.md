@@ -6,7 +6,6 @@
  
 
 Marek:
-    - přidání tlačítka pro smazání rezervace (-)
 
 Filip:
 	

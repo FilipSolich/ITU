@@ -87,5 +87,4 @@ function bind_icons(mytime,mydata){
 	elem[2].title = mydata["count"];
 	elem[3].title = mydata["note"];
 
-
 }
