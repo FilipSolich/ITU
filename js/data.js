@@ -4,6 +4,10 @@ var data = {
 			'table': 20,
 			'timeFrom': '15:30',
 			'timeTo': '16:30',
+			//todo name
+			// tel
+			// count of people
+			// note
 		}
 	]
 };
