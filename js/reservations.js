@@ -14,7 +14,7 @@ function reservationFull(date, table, timeFrom, timeTo) {
 }
 
 function setTableReserverd(table_id) {
-	setTableColor(table_id, '#F1E10E') 
+	setTableColor(table_id, '#F1E10E');
 }
 
 function setTableColor(table_id, color) {
@@ -98,6 +98,29 @@ function importReservations() {
 		data = JSON.parse(e.target.result);
 	};
 	fileread.readAsText(file);
+}
+
+function changeReservationInfo() {
+	clearReservationInfo();
+
+	var dayData = data[getDate()];
+
+	dayData.forEach(function (value) {
+		if (value['table'].toString() == $('.selected').attr('id')) {
+			bind_icons(value);
+		}
+	});
+}
+
+function clearReservationInfo() {
+	bind_icons({
+		'timeFrom': '15:00',
+		'timeTo': '23:00',
+		'name': '',
+		'tel': '',
+		'count': '',
+		'note': '',
+	});
 }
 
 

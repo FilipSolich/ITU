@@ -10,6 +10,7 @@ function timeChange() {
 	let date = getDate();
 	let time = getTime();
 	clearTables();
+	changeReservationInfo();
 
 	data[date].forEach(function (item) {
 		if (item.timeFrom <= time && item.timeTo > time) {
@@ -19,9 +20,8 @@ function timeChange() {
 }
 
 function updateTimeLabel() {
-	let hours = Math.floor($('#reservationTime').val() / 2) + 13;
-	let minutes = ($('#reservationTime').val() % 2 == 0) ? "00" : "30";
-	$('#reservationTimeLabel').text('Čas ' + hours + ':' + minutes);
+	let hours = parseInt($('#reservationTime').val(), 10) + 13;
+	$('#reservationTimeLabel').text('Čas ' + hours + ':00');
 	timeChange();
 }
 

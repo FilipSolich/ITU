@@ -44,6 +44,8 @@ function select_table(x){
 		}
 		x.classList.add('selected');
 	}
+
+	changeReservationInfo();
 }
 
 document.querySelector('select[name="time_reserv"]').onchange=function(event){
@@ -70,21 +72,23 @@ document.querySelector('select[name="time_reserv"]').onchange=function(event){
 		'tel': tel,
 		'count': count,
 		'note': note,
-*/ 
-function bind_icons(mytime,mydata){
-	var id_res = "reservation-";	
-	
-	if(mydata["timeFrom"] == mydata["timeTo"]){ //reservation for one hour
-		time = mydata["timeFrom"]
+*/
+function bind_icons(mydata){
+	var id_res = "reservation-";
+	var hourFrom = mydata['timeFrom'][0] + mydata['timeFrom'][1];
+	var hourTo = mydata['timeTo'][0] + mydata['timeTo'][1];
+
+	var loop = parseInt(hourTo, 10) - parseInt(hourFrom, 10);
+
+	for (var i = 0; i < loop; i++) {
+		var time = parseInt(mydata['timeFrom'][0] + mydata['timeFrom'][1], 10) + i;
+		var curr_line = id_res + time.toString();
+		var elem = document.getElementById(curr_line).children; 
+
+		// for icons
+		elem[0].innerText = mydata["name"]; //span for value name
+		elem[1].title = mydata["tel"];
+		elem[2].title = mydata["count"];
+		elem[3].title = mydata["note"];
 	}
-
-	id_res.append(mytime[0]);
-	id_res.append(mytime[1]); /* I need format like reservation-13 */ 
-	var elem = document.getElementById(id_res).children; 
-	/*for icons*/
-	elem[0].innerText = mydata["name"];//span for value name
-	elem[1].title = mydata["tel"];
-	elem[2].title = mydata["count"];
-	elem[3].title = mydata["note"];
-
 }
