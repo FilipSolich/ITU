@@ -206,7 +206,7 @@ select{
 .input-icons i {
 	position: absolute;
 	z-index: 1;
-	margin-left: 19%;
+	margin-left: 19% ;
 	margin-top: 1%;
 	width: 5px;
 }
