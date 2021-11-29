@@ -114,13 +114,29 @@ function changeReservationInfo() {
 
 function clearReservationInfo() {
 	bind_icons({
-		'timeFrom': '15:00',
+		'timeFrom': '13:00',
 		'timeTo': '23:00',
 		'name': '',
 		'tel': '',
 		'count': '',
 		'note': '',
 	});
+}
+
+function deleteReservation() {
+	var delId = parseInt($(this).attr('id').replace('delete-', ''), 10);
+
+	var dayData = data[getDate()];
+
+	dayData.forEach(function (value, idx, arr) {
+		timeFrom = parseInt(value['timeFrom'][0] + value['timeFrom'][1], 10);
+		timeTo = parseInt(value['timeTo'][0] + value['timeTo'][1], 10);
+		if (delId >= timeFrom && delId < timeTo) {
+			arr.splice(idx, 1);
+		}
+	});
+
+	changeReservationInfo();
 }
 
 
@@ -137,4 +153,9 @@ $(function() {
 // Bind import reservations button
 $(function() {
 	$('#import').on('click', importReservations);
+});
+
+// Bind delete reservations button
+$(function() {
+	$('.delete').on('click', deleteReservation);
 });
