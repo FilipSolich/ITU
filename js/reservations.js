@@ -131,6 +131,7 @@ function clearReservationInfo() {
 }
 
 function deleteReservation() {
+	
 	var delId = parseInt($(this).attr('id').replace('delete-', ''), 10);
 
 	var dayData = data[getDate()];
@@ -144,6 +145,7 @@ function deleteReservation() {
 	});
 
 	changeReservationInfo();
+	timeChange();
 }
 
 
