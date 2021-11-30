@@ -1,3 +1,10 @@
+/*
+ Project:    ITU - Rezervační kalendář
+ University: Brno University of Technology, FIT
+ Date:       29.11. 2021
+ Author:  Filip Solich <xsolic00@stud.fit.vutbr.cz> 
+*/
+
 function createDay(date) {
 	if (data[date] === undefined)
 		data[date] = [];
@@ -124,6 +131,7 @@ function clearReservationInfo() {
 }
 
 function deleteReservation() {
+	
 	var delId = parseInt($(this).attr('id').replace('delete-', ''), 10);
 
 	var dayData = data[getDate()];
@@ -137,6 +145,7 @@ function deleteReservation() {
 	});
 
 	changeReservationInfo();
+	timeChange();
 }
 
 

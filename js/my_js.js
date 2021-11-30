@@ -1,3 +1,9 @@
+/*
+ Project:    ITU - Rezervační kalendář
+ University: Brno University of Technology, FIT
+ Date:       29.11. 2021
+ Author:  Marek Sechra <xsechr00@stud.fit.vutbr.cz> 
+*/
 function showpage1(){
 	document.getElementById("page_one").style.display = "block";
 	document.getElementById("page_two").style.display = "none";
