@@ -63,16 +63,6 @@ document.querySelector('select[name="time_reserv"]').onchange=function(event){
 	}
 }
 
-/*
-	Data format
-		'table': table,
-		*'timeFrom': timeFrom,
-		*'timeTo': timeTo,
-		*'name': name,
-		'tel': tel,
-		'count': count,
-		'note': note,
-*/
 function bind_icons(mydata){
 	var id_res = "reservation-";
 	var hourFrom = mydata['timeFrom'][0] + mydata['timeFrom'][1];
