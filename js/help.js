@@ -121,3 +121,6 @@ function bind_icons(mydata){
 		elem[3].title = mydata["note"];
 	}
 }
+$(window).bind("beforeunload", function(){
+	return confirm("Opravdu chcete opustit stránku, mužete přijít o data?"); 
+});

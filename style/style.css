@@ -124,8 +124,7 @@ a{
 	width: 100% !important;
 }
 .myresspan{
-	display: inline !important;
-	width: 75%;
+	
 }
 #button_delete{
 	height: 22px;
@@ -152,7 +151,7 @@ i{
 	border-radius: 10px;
 	border: 2px solid;
 	border-color: rgb(0,0,0);
-	padding-bottom: 100px;
+	padding-bottom: 200px;
 }
 html body{
 	background-color: rgb(220,220,220) !important;
@@ -167,10 +166,15 @@ html body{
 }
 .reservation-time, .reservation-val{
 	display: inline-block;
-	height: 7.1%;
+	height: 6.5%;
 	border-bottom: 1px solid;
 	border-color:rgb(220,220,220);
 	background-color: rgb(255,255,255) !important;
+}
+.reservation span span{
+	display: inline;
+	font-size: 21.5px;
+	
 }
 .reservation-time{
 	text-align: center;
@@ -210,13 +214,14 @@ select{
 .input-icons i {
 	position: absolute;
 	z-index: 1;
-	margin-left: 19% ;
-	margin-top: 1%;
+	margin-top: 2%;
 	width: 5px;
 }
 .fake_button{
+	float:right;
 	padding: 0;
 	margin: 0;
+	margin-right: 40px;
 	border: 0;
 	width: 0;
 	height: 0;
