@@ -8,7 +8,6 @@
 .table{
 	height: 12%;
 	width: 30%;
-	/*background-color: rgb(255,228,196);*/
 	text-align: center;
 	border: solid black 0.10em;
 	border-radius: 1.5em;
@@ -16,7 +15,6 @@
 .big_table{
 	height: 15%;
 	width: 60%;
-	/*background-color: rgb(255,228,196);*/
 	text-align: center;
 	border: solid black 0.10em;
 	border-radius: 1.5em;
@@ -24,7 +22,6 @@
 .rounded_table{
 	height: 25%;
 	width: 25%;
-	/*background-color: rgb(255,228,196);*/
 	text-align: center;
 	border: solid black 0.10em;
 	border-radius: 5em;

@@ -6,7 +6,8 @@
 
  Author:  Filip Solich <xsolic00@stud.fit.vutbr.cz> 
 	 - formulář pro rezervace
-	 - tlačítka import, export	
+	 - tlačítka import, export
+	 - pg-calendar	
 -->
 
 <!DOCTYPE html>
@@ -19,7 +20,6 @@
 		<meta name="author" content="Vasil Poposki">
 
 		<!-- Its working only with internet -->
-		<!-- TODO cleanup (Bootstrap v4.3.1 or v5.1.3) -->
 		<!-- Bootstrap v4.3.1 JS + CSS -->
 		<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -106,7 +106,7 @@
 									</a>
 								</div>
 								<div class="col-3">
-									<div class="door"></div>
+									<div class="door"></div> <!-- Specific element for imagine doors for better oriantation in app-->
 								</div>
 								<div class="col-6">
 									<div class="row">
@@ -140,7 +140,7 @@
 												</div>
 											</a>
 											<a href="#">
-												<div class="stool mt-4" onmouseover="my_alert(this)" onmouseout="noalert(this)">
+												<div class="stool mt-4" onmouseover="my_alert(this)"onmouseout="noalert(this)">
 													<span id="10" class="desk" class="btn btn-light" onclick="select_table(this)">
 														<span class="num_stool">10</span>
 													</span>
@@ -161,7 +161,6 @@
 												</div>
 											</a>
 										</div>
-										
 										<div class="col-6">
 											<div class="bar mt-5">
 												<span class="bar_name">Bar</span>
@@ -269,12 +268,12 @@
 								<span class="reservation-val"><b>Rezervace</b></span>
 								<span id="reservation-13" class="reservation-val">
 									<span class="myresspan"></span>
-									<i class="bi bi-telephone-outbound"></i>
-									<i class="bi bi-people-fill mx-1" ></i>
-									<i class="bi bi-card-text mx-1"></i>
+									<i class="bi bi-telephone-outbound"></i> <!-- Icon for telephone -->
+									<i class="bi bi-people-fill mx-1" ></i> <!-- Icon for count of people -->
+									<i class="bi bi-card-text mx-1"></i> <!-- Icon  for title of reservation -->
 								</span>
 								
-								<span id="reservation-14" class="reservation-val">
+								<span id="reservation-14" class="reservation-val"> 
 									<span style="display: inline !important;"></span>
 									<i class="bi bi-telephone-outbound" ></i>
 									<i class="bi bi-people-fill mx-1" ></i>
@@ -329,7 +328,7 @@
 									<i class="bi bi-card-text mx-1"></i>
 								</span>
 							</div>
-							<div class="col-sm-1">
+							<div class="col-sm-1"> <!-- Buttons for deleting reservations -->
 								<div class="delete_buttons mt-4">
 									<button id="delete-13" class="delete btn btn-warning btn-sm rounded rounded-circle" > - </button>
 									<button id="delete-14" class="delete btn btn-warning btn-sm rounded rounded-circle" > - </button>
@@ -458,7 +457,7 @@
 		</footer>
 
 		<script type="text/javascript" src="js/data.js"></script>
-		<script type="text/javascript" src="js/my_js.js"></script> <!-- TODO remove or rename??? -->
+		<script type="text/javascript" src="js/help.js"></script> 
 		<script type="text/javascript" src="js/reservations.js"></script>
 		<script type="text/javascript" src="js/calendar.js"></script>
 		<script type="text/javascript" src="js/keyboard.js"></script>
