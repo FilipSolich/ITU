@@ -166,7 +166,7 @@ html body{
 }
 .reservation-time, .reservation-val{
 	display: inline-block;
-	height: 6.5%;
+	height: 5.4%;
 	border-bottom: 1px solid;
 	border-color:rgb(220,220,220);
 	background-color: rgb(255,255,255) !important;
