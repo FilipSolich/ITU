@@ -1,7 +1,7 @@
 /*
  Project:    ITU - Rezervační kalendář
  University: Brno University of Technology, FIT
- Date:       29.11. 2021
+ Date:       29. 11. 2021
  Author:     Filip Solich <xsolic00@stud.fit.vutbr.cz> 
 */
 
@@ -64,33 +64,56 @@ function createReservation(date, table, timeFrom, timeTo, name, tel, count, note
 function processReservationForm() {
 	var time_arr = $('#time_reserv').val();
 
-	createReservation(
-		getDate(),
-		$('.selected').attr('id'),
-		time_arr[0],
-		time_arr[time_arr.length - 1],
-		$('#res-name').val(),
-		$('#res-tel').val(),
-		$('#res-count').val(),
-		$('#res-note').val(),
-	);
+	var tableId = $('.selected').attr('id');
+	var date = getDate();
+	var error_msg;
 
-	$('#res-name').val('');
-	$('#res-tel').val('');
-	$('#res-count').val('');
-	$('#res-note').val('');
+	if (tableId == undefined) {
+		error_msg = 'Vyberte stůl';
+	} else if (date == undefined) {
+		error_msg = 'Vyberte datum z kalendáře';
+	} else {
+		createReservation(
+			date,
+			tableId,
+			time_arr[0],
+			time_arr[time_arr.length - 1],
+			$('#res-name').val(),
+			$('#res-tel').val(),
+			$('#res-count').val(),
+			$('#res-note').val(),
+		);
 
-	timeChange();
+		$('#res-name').val('');
+		$('#res-tel').val('');
+		$('#res-count').val('');
+		$('#res-note').val('');
+
+		timeChange();
+	}
 
 	var wrapper = document.createElement('div');
-	wrapper.innerHTML = `
-	<div class="alert alert-success alert-dismissible" role="alert">
-		Rezervace vytvořena
-		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-	</div>`;
+
+	if (error_msg == undefined) {
+		wrapper.innerHTML = `
+		<div class="alert alert-success alert-dismissible" role="alert">
+			Rezervace vytvořena
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>`;
+	} else {
+		wrapper.innerHTML = `
+		<div class="alert alert-danger alert-dismissible" role="alert">`
+			+ error_msg +
+			`<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>`;
+	}
 
 	var alert = $('#alertPlaceHolder');
 	alert.append(wrapper);
+
+	setTimeout(function () {
+		wrapper.remove();
+	}, 3000);
 }
 
 // Export reservations into JSON
