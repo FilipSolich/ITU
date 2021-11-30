@@ -170,10 +170,14 @@ html body{
 }
 .reservation-time, .reservation-val{
 	display: inline-block;
-	height: 5.2%;
+	height: 6.2%;
 	border-bottom: 1px solid;
 	border-color:rgb(220,220,220);
 	background-color: rgb(255,255,255) !important;
+}
+option{
+	display: block;
+	height: 6.2%;
 }
 .reservation span span{
 	display: inline;
