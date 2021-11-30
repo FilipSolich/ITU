@@ -180,7 +180,7 @@ html body{
 }
  .selected{
 	border: 5px solid;
-	border-color: rgba(238, 241, 5, 0.986) !important;
+	border-color: slateblue;
 }
 
 .name_reservation{
