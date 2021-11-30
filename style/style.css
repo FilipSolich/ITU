@@ -218,6 +218,7 @@ select{
 	border-radius: 5px;
 	border: 1px solid;
 	display: none;
+	margin-top: 50px;
 }
 .input-icons i {
 	position: absolute;
@@ -233,4 +234,7 @@ select{
 	border: 0;
 	width: 0;
 	height: 0;
+}
+#reservationFormSubmit{
+	width: 98%;
 }

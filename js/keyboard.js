@@ -60,7 +60,7 @@ function key_e(){
     document.getElementById(id_display).value +=  "e";
 }
 function key_r(){
-    document.getElementById(id_display).value +=  "f";
+    document.getElementById(id_display).value +=  "r";
 }
 function key_t(){
     document.getElementById(id_display).value +=  "g";
