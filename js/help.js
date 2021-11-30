@@ -8,7 +8,7 @@
 /*
 	Function switch context of views tables
 	If u want to show page 1 context. Context of page 2 is set on none
-	If u want to show page context. Context of page 1 is set on none  
+	If u want to show page context. Context of page 1 is set on none
 */
 function showpage1(){
 	document.getElementById("page_one").style.display = "block";
@@ -73,7 +73,7 @@ function select_table(x){
 /*
 	Fucntion is called when in input is selected any time.
 	When is time selected we set new class.
-	When time is no selected class are removed 
+	When time is no selected class are removed
 */
 document.querySelector('select[name="time_reserv"]').onchange=function(event){
 	var y = document.querySelector('select[name="time_reserv"]');
@@ -85,7 +85,7 @@ document.querySelector('select[name="time_reserv"]').onchange=function(event){
 		z[i].classList.remove('selected_time');
 	}
 
-	for(var i=0; i<x.length;++i){ //set news 
+	for(var i=0; i<x.length;++i){ //set news
 		x[i].classList.add("selected_time");
 	}
 }
