@@ -4,6 +4,12 @@
  Date:       29.11. 2021
  Author:  Marek Sechra <xsechr00@stud.fit.vutbr.cz> 
 */
+
+/*
+	Function switch context of views tables
+	If u want to show page 1 context. Context of page 2 is set on none
+	If u want to show page context. Context of page 1 is set on none  
+*/ 
 function showpage1(){
 	document.getElementById("page_one").style.display = "block";
 	document.getElementById("page_two").style.display = "none";
@@ -14,7 +20,13 @@ function showpage2(){
 	document.getElementById("page_one").style.display = "none";
 	document.getElementById("page_two").style.display = "block";
 }
-
+/*
+	Setting titles on tables by class.
+	class: "table" is for 4 people
+	class: "big_table" is for 6 people
+	class: "rounded_table" is for 5 people
+	class: "stool" represent bar stool for one.
+*/
 function my_alert(x){
 	if(x.classList == "table mx-5" ){
 		x.title = "stůl pro 4 osoby";
@@ -37,7 +49,10 @@ function my_alert(x){
 function noalert(x){
 	x.style.color = "black";
 }
-
+/*
+	If person clicked on some table is set new class selected and others classes selected are removed from app
+	in function we called function changeReservationInfo().
+*/
 function select_table(x){
 	
 	if( x.classList[1] == "selected"){
@@ -53,7 +68,11 @@ function select_table(x){
 
 	changeReservationInfo();
 }
-
+/*
+	Fucntion is called when in input is selected any time.
+	When is time selected we set new class.
+	When time is no selected class are removed 
+*/
 document.querySelector('select[name="time_reserv"]').onchange=function(event){
 	var y = document.querySelector('select[name="time_reserv"]');
 	var x = y.selectedOptions;
@@ -69,6 +88,18 @@ document.querySelector('select[name="time_reserv"]').onchange=function(event){
 	}
 }
 
+/*
+	Data format
+		'table': table,
+		*'timeFrom': timeFrom,
+		*'timeTo': timeTo,
+		*'name': name,
+		'tel': tel,
+		'count': count,
+		'note': note,
+
+		Function set title for icons in interval of reservation.
+*/
 function bind_icons(mydata){
 	var id_res = "reservation-";
 	var hourFrom = mydata['timeFrom'][0] + mydata['timeFrom'][1];
