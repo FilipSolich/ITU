@@ -2,24 +2,24 @@
  Project:    ITU - Rezervační kalendář
  University: Brno University of Technology, FIT
  Date:       29.11. 2021
- Author:  Marek Sechra <xsechr00@stud.fit.vutbr.cz> 
+ Author:     Marek Sechra <xsechr00@stud.fit.vutbr.cz>
 */
 
 /*
 	Function switch context of views tables
 	If u want to show page 1 context. Context of page 2 is set on none
 	If u want to show page context. Context of page 1 is set on none  
-*/ 
+*/
 function showpage1(){
 	document.getElementById("page_one").style.display = "block";
 	document.getElementById("page_two").style.display = "none";
 }
 
-
 function showpage2(){
 	document.getElementById("page_one").style.display = "none";
 	document.getElementById("page_two").style.display = "block";
 }
+
 /*
 	Setting titles on tables by class.
 	class: "table" is for 4 people
@@ -44,11 +44,12 @@ function my_alert(x){
 		x.title = "barová židle pro 1 osobu";
 	}
 
-
 }
+
 function noalert(x){
 	x.style.color = "black";
 }
+
 /*
 	If person clicked on some table is set new class selected and others classes selected are removed from app
 	in function we called function changeReservationInfo().
@@ -68,6 +69,7 @@ function select_table(x){
 
 	changeReservationInfo();
 }
+
 /*
 	Fucntion is called when in input is selected any time.
 	When is time selected we set new class.

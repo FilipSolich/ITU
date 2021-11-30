@@ -2,14 +2,16 @@
  Project:    ITU - Rezervační kalendář
  University: Brno University of Technology, FIT
  Date:       29.11. 2021
- Author:  Filip Solich <xsolic00@stud.fit.vutbr.cz> 
+ Author:     Filip Solich <xsolic00@stud.fit.vutbr.cz> 
 */
 
+// Create empty array when on date key in data object
 function createDay(date) {
 	if (data[date] === undefined)
 		data[date] = [];
 }
 
+// Return `true` if table is full for specific date and time else `false`
 function reservationFull(date, table, timeFrom, timeTo) {
 	data[date].forEach(element => {
 		if (element.table == table && (timeTo > element.timeFrom || timeFrom < element.timeTo)) {
@@ -20,14 +22,17 @@ function reservationFull(date, table, timeFrom, timeTo) {
 	return false;
 }
 
+// Set table color on reserved
 function setTableReserverd(table_id) {
 	setTableColor(table_id, '#F1E10E');
 }
 
+// Set table color
 function setTableColor(table_id, color) {
 	$('#' + table_id).css('background-color', color);
 }
 
+// Remove reserved color from all tables
 function clearTables() {
 	let tables = $('.desk');
 	tables.each(function () {
@@ -35,6 +40,7 @@ function clearTables() {
 	});
 }
 
+// Create reservation with given informations
 function createReservation(date, table, timeFrom, timeTo, name, tel, count, note) {
 	createDay(date);
 
@@ -54,10 +60,10 @@ function createReservation(date, table, timeFrom, timeTo, name, tel, count, note
 	return true;
 }
 
+// Process reservation form and validate data
 function processReservationForm() {
 	var time_arr = $('#time_reserv').val();
 
-	// TODO add validation
 	createReservation(
 		getDate(),
 		$('.selected').attr('id'),
@@ -87,6 +93,7 @@ function processReservationForm() {
 	alert.append(wrapper);
 }
 
+// Export reservations into JSON
 function exportReservations() {
 	var blob = new Blob([JSON.stringify(data)], {
 		type: 'application/json'
@@ -97,6 +104,7 @@ function exportReservations() {
 	link.click();
 }
 
+// Import reservations from JSON
 function importReservations() {
 	var test = document.getElementById('uploadFile');
 	var file = test.files[0];
@@ -107,6 +115,7 @@ function importReservations() {
 	fileread.readAsText(file);
 }
 
+// Set reservations info for selected date
 function changeReservationInfo() {
 	clearReservationInfo();
 
@@ -119,6 +128,7 @@ function changeReservationInfo() {
 	});
 }
 
+// Clear reservations info for selected date
 function clearReservationInfo() {
 	bind_icons({
 		'timeFrom': '13:00',
@@ -130,8 +140,8 @@ function clearReservationInfo() {
 	});
 }
 
+// Delete reservation
 function deleteReservation() {
-	
 	var delId = parseInt($(this).attr('id').replace('delete-', ''), 10);
 
 	var dayData = data[getDate()];
