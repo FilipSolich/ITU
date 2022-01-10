@@ -24,7 +24,7 @@ function timeChange() {
 	changeReservationInfo();
 
 	data[date].forEach(function (item) {
-		if (item.timeFrom <= time && item.timeTo > time) {
+		if (item.timeFrom <= time && item.timeTo >= time) {
 			setTableReserverd(item.table);
 		}
 	});
