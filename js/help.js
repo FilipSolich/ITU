@@ -71,7 +71,7 @@ function select_table(x){
 }
 
 /*
-	Fucntion is called when in input is selected any time.
+	Function is called when in input is selected any time.
 	When is time selected we set new class.
 	When time is no selected class are removed
 */
