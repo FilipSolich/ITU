@@ -107,7 +107,7 @@ function bind_icons(mydata){
 	var hourFrom = mydata['timeFrom'][0] + mydata['timeFrom'][1];
 	var hourTo = mydata['timeTo'][0] + mydata['timeTo'][1];
 
-	var loop = parseInt(hourTo, 10) - parseInt(hourFrom, 10);
+	var loop = parseInt(hourTo, 10) - parseInt(hourFrom, 10) + 1;
 
 	for (var i = 0; i < loop; i++) {
 		var time = parseInt(mydata['timeFrom'][0] + mydata['timeFrom'][1], 10) + i;
