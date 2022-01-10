@@ -172,7 +172,8 @@ function deleteReservation() {
 	dayData.forEach(function (value, idx, arr) {
 		timeFrom = parseInt(value['timeFrom'][0] + value['timeFrom'][1], 10);
 		timeTo = parseInt(value['timeTo'][0] + value['timeTo'][1], 10);
-		if (delId >= timeFrom && delId < timeTo) {
+		console.log(`ID ${delId} timeFrom ${timeFrom} timeTo ${timeTo}`);
+		if (delId >= timeFrom && delId <= timeTo) {
 			arr.splice(idx, 1);
 		}
 	});
