@@ -71,26 +71,6 @@ function select_table(x){
 }
 
 /*
-	Function is called when in input is selected any time.
-	When is time selected we set new class.
-	When time is no selected class are removed
-*/
-document.querySelector('select[name="time_reserv"]').onchange=function(event){
-	var y = document.querySelector('select[name="time_reserv"]');
-	var x = y.selectedOptions;
-
-	var z = document.getElementsByClassName("selected_time"); //delete all class selected_time
-	var len = z.length;
-	for( var i = 0; i < len ; i++){
-		z[i].classList.remove('selected_time');
-	}
-
-	for(var i=0; i<x.length;++i){ //set news
-		x[i].classList.add("selected_time");
-	}
-}
-
-/*
 	Data format
 		'table': table,
 		*'timeFrom': timeFrom,
