@@ -1,6 +1,6 @@
 # ITU - Kalendář rezervací
 
-Kalendář rezervací je sýstém určen pro vytváření rezervací personálem restaurací, kaváren a barů.
+Kalendář rezervací je sýstém určen pro vytváření rezervací personálem restaurací, kaváren a barů. (Hodnocení 44/55)
 
 ## Spuštění systému
 
